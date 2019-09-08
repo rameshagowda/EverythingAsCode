@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  subscription: 'DOX'
+  subscription: 'cicd-devops-IaC'
 
 stages:
 - stage: build
