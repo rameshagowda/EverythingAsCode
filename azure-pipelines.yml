@@ -15,17 +15,6 @@ stages:
     - script: echo Build
       displayName: 'First step in building the website skeleton'
 
-- stage: build_integration
-  displayName: 'Build the integration environment resource group'
-  dependsOn: build
-  jobs:
-  - template: ci/templates/create-resource-group.yml
-    parameters:
-      name: create_infrastructure
-      displayName: 'First step in building the integration infrastructure'
-      vmImage: 'Ubuntu-16.04'
-      resourceGroupName: Moen
-      subscription: $(subscription)
 
 - stage: deploy_app_service_to_integration
   displayName: 'Deploy the app service to the integration environment'
