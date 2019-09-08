@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  subscription: 'cicd-devops-IaC'
+  subscription: 'SimpleAzureWebApp'
 
 stages:
 - stage: build
